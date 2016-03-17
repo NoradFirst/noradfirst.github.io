@@ -1,13 +1,12 @@
-(function (){
-    var app=angular.module('beerStore',[]);
+(function() {
+    var app = angular.module('beerStore', ['store-directives']);
 
-    app.controller('StoreController',['$http',function($http){
-    //app.controller('StoreController',function(){
-    // this.beers=test;});
+    app.controller('StoreController', ['$http', function($http){
         var store = this;
-        store.beers=[];
+        store.beers = [];
         $http.get('/beer.json').success(function(data){
             store.beers=data;
         });
     }]);
+
 })();
