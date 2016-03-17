@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('beerStore', ['store-directives']);
+    var app = angular.module('beerStore', []);
 
     app.controller('StoreController', ['$http', function($http){
         var store = this;
