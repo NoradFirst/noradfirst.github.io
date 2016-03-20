@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 
-<html ng-app="beerStore">
+<html lang="fr" ng-app="beerStore">
 
   <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/css.css" rel="stylesheet">
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/beer.js"></script>
@@ -18,18 +18,32 @@
 
   <body ng-controller="StoreController as store">
 
-<div ng-repeat="beer in store.beers">
-  <h3>{{beer.Nom}}</h3>
-  <p>{{beer.Authenticite}}</p>
-  <p>{{beer.Equilibre}}</p>
-  <p>{{beer.Longueur}}</p>
-  <p>{{beer.Amertume}}</p>
-  <p>{{beer.Fruite}}</p>
-  <p>{{beer.Aspect}}</p>
-  <p>{{beer.Mousse}}</p>
-  <p>{{beer.Bonus}}</p>
-  <p>{{beer.Authenticite*2+beer.Equilibre*2+beer.Longueur*2+beer.Amertume+beer.Fruite+beer.Aspect+beer.Mousse+beer.Bonus}}</p>
-</div>
+  <table>
+      <tr>
+          <th>Nom</th>
+          <th>Authenticité</th>
+          <th>Equilibre</th>
+          <th>Longueur</th>
+          <th>Amertume</th>
+          <th>Fruité</th>
+          <th>Aspect</th>
+          <th>Mousse</th>
+          <th>Bonus</th>
+          <th>Moyenne</th>
+      </tr>
+    <tr ng-repeat="beer in store.beers">
+      <td>{{beer.Nom}}</td>
+      <td>{{beer.Authenticite}}</td>
+      <td>{{beer.Equilibre}}</td>
+      <td>{{beer.Longueur}}</td>
+      <td>{{beer.Amertume}}</td>
+      <td>{{beer.Fruite}}</td>
+      <td>{{beer.Aspect}}</td>
+      <td>{{beer.Mousse}}</td>
+      <td>{{beer.Bonus}}</td>
+      <td>{{beer.Authenticite*2+beer.Equilibre*2+beer.Longueur*2+beer.Amertume+beer.Fruite+beer.Aspect+beer.Mousse+beer.Bonus}}</td>
+    </tr>
+  </table>
 
 </body>
 </html>
