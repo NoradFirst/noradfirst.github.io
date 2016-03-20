@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 
-<html ng-app='beerStore'>
+<html ng-app="beerStore">
 
   <head>
     <meta charset="utf-8">
@@ -9,20 +9,12 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/css.css" rel="stylesheet">
-  </head>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
-  <!--<script type="text/javascript" src="js/beer.js"></script>-->
-  <script>
-      var app=angular.module('beerStore',[]);
-      app.controller('StoreController',['$http',function($http){
-          var store = this;
-          store.beers=[];
-          $http.get('js/beer.json').success(function(data){store.beers=data;})
-      }]);
-  </script>
+  <script type="text/javascript" src="js/beer.js"></script>
+  </head>
 
   <body ng-controller="StoreController as store">
 
@@ -38,8 +30,6 @@
   <p>{{beer.Bonus}}</p>
   <p>{{beer.Authenticite*2+beer.Equilibre*2+beer.Longueur*2+beer.Amertume+beer.Fruite+beer.Aspect+beer.Mousse+beer.Bonus}}</p>
 </div>
-
-
 
 </body>
 </html>
