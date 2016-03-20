@@ -6,6 +6,6 @@
     // this.beers=test;});
         var store = this;
         store.beers=[];
-        $http.get('beer.json').success(function(data){store.beers=data;})
+        $http.get('js/beer.json').success(function(data){store.beers=data;})
     }]);
 })();
