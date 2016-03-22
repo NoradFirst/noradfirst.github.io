@@ -156,7 +156,7 @@
   {
     "Nom": "Anchor Humming Ale",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 1,
     "Longueur": 2,
@@ -660,7 +660,7 @@
   {
     "Nom": "Brew Dog Hardcore IPA 9",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 1,
@@ -674,7 +674,7 @@
   {
     "Nom": "Brew Dog Punk IPA 5",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 2,
@@ -814,7 +814,7 @@
   {
     "Nom": "Brouwerij'T IJ Zatte",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 2,
@@ -954,7 +954,7 @@
   {
     "Nom": "Buxton Moor Top",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 1,
     "Longueur": 1,
@@ -968,7 +968,7 @@
   {
     "Nom": "Buxton SPA",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 1,
     "Longueur": 2,
@@ -1150,7 +1150,7 @@
   {
     "Nom": "Houblon Chouffe",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 1,
@@ -1346,7 +1346,7 @@
   {
     "Nom": "De Molen Alive & Kicking",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 2,
@@ -1374,7 +1374,7 @@
   {
     "Nom": "De Molen Rye IPA Cascade-Amarillo",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 1,
@@ -1682,7 +1682,7 @@
   {
     "Nom": "Elav Indie Ale",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 1,
@@ -1710,7 +1710,7 @@
   {
     "Nom": "Emelisse Smoked Rye IPA",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 1,
     "Longueur": 2,
@@ -1906,7 +1906,7 @@
   {
     "Nom": "Flying Dog Raging Bitch",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 2,
     "Longueur": 1,
@@ -2634,7 +2634,7 @@
   {
     "Nom": "Jopen Jacobus RPA",
     "Pression": "y",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 1,
     "Equilibre": 2,
     "Longueur": 2,
@@ -2732,7 +2732,7 @@
   {
     "Nom": "Kasteel Hoppy",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 1,
     "Longueur": 1,
@@ -3404,7 +3404,7 @@
   {
     "Nom": "Moon Pale Ale",
     "Pression": "n",
-    "Style": "PA",
+    "Style": "Pale Ale",
     "Authenticite": 2,
     "Equilibre": 1,
     "Longueur": 2,
