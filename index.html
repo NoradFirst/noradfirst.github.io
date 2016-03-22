@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href="css/css.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -18,9 +19,24 @@
 
   <body ng-controller="StoreController as store">
 
+  <form>
+      <div class="form-group">
+          <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+              <input type="text" class="form-control" placeholder="Search for beer or style" ng-model="searchBeer">
+
+          </div>
+      </div>
+  </form>
+
   <table>
       <tr>
-          <th>Nom</th>
+          <th><a href="#" ng-click="sortType='Nom';sortReverse=!sortReverse">Nom
+              <span ng-show="sortType == 'Nom'&& !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'Nom'&& sortReverse" class="fa fa-caret-up"></span>
+          </a></th>
+          <th>Style</th>
           <th>Authenticité</th>
           <th>Equilibre</th>
           <th>Longueur</th>
@@ -29,10 +45,17 @@
           <th>Aspect</th>
           <th>Mousse</th>
           <th>Bonus</th>
-          <th>Moyenne</th>
+          <th><a href="#" ng-click="sortType='Moyenne';sortReverse=!sortReverse">Moyenne
+              <span ng-show="sortType == 'Moyenne'&& !sortReverse" class="fa fa-caret-up"></span>
+              <span ng-show="sortType == 'Moyenne'&& sortReverse" class="fa fa-caret-down"></span>
+          </a></th>
       </tr>
-    <tr ng-repeat="beer in store.beers">
-      <td>{{beer.Nom}}</td>
+    <tr ng-repeat="beer in store.beers | orderBy:sortType:sortReverse | filter:searchBeer">
+      <td>{{beer.Nom}}
+          <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_filled-25.png" title="Beer Filled" width="20" ng-show="beer.Pression=='y'">
+          <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_bottle_filled-25.png" title="Beer Bottle Filled" width="20" ng-show="beer.Pression=='n'">
+      </td>
+        <td>{{beer.Style}}</td>
       <td>{{beer.Authenticite}}</td>
       <td>{{beer.Equilibre}}</td>
       <td>{{beer.Longueur}}</td>
@@ -41,7 +64,7 @@
       <td>{{beer.Aspect}}</td>
       <td>{{beer.Mousse}}</td>
       <td>{{beer.Bonus}}</td>
-      <td>{{beer.Authenticite*2+beer.Equilibre*2+beer.Longueur*2+beer.Amertume+beer.Fruite+beer.Aspect+beer.Mousse+beer.Bonus}}</td>
+      <td>{{beer.Moyenne}}</td>
     </tr>
   </table>
 
