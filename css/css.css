@@ -10,3 +10,30 @@ td, th
     border: 1px solid black;
     padding: 2px;
 }
+
+
+.list>span>a{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.list>span>a>div>img:hover{
+    border-radius: 50%;
+    border: 2px solid #000
+}
+
+.transp {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.over img{
+    border-radius: 50%;
+    border: 2px solid #000
+}
+
+
+

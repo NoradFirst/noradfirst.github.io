@@ -23,12 +23,50 @@
       <div class="form-group">
           <div class="input-group">
               <div class="input-group-addon"><i class="fa fa-search"></i></div>
-
               <input type="text" class="form-control" placeholder="Filtrer par Nom ou par Style" ng-model="searchBeer">
-
           </div>
       </div>
   </form>
+
+  <div class="list">
+
+      <span ng-class="imgClassAll">
+          <a href="#" ng-click="color='all';changeClass()">
+              <div>
+                  <img src="img/all.png" width="60" height="60">
+              </div>
+              <div>
+                  Toutes
+              </div>
+          </a>
+      </span>
+      <span ng-class="imgClassBlanche">
+          <a href="#" ng-click="color='Blanche';changeClass()">
+              <div>
+                  <img src="img/blanche.png" width="60" height="60">
+              </div>
+              <div>
+                  Blanches
+              </div>
+          </a>
+      </span>
+      <span ng-class="imgClassBlonde">
+          <a href="#" ng-click="color='Blonde';changeClass()">
+              <div>
+                  <img src="img/blonde.png" width="60" height="60">
+              </div>
+              <div>
+                  Blondes
+              </div>
+          </a>
+      </span>
+      <span ng-class="imgClassAmbree"><a href="#" ng-click="color='Ambrée';changeClass()"><div><img src="img/ambre.png" width="60" height="60" ></div><div>Ambrées</div></a></span>
+      <span ng-class="imgClassRubis"><a href="#" ng-click="color='Rubis';changeClass()"><div><img src="img/rubis.png" width="60" height="60"></div><div>Rubis</div></a></span>
+      <span ng-class="imgClassBrune"><a href="#" ng-click="color='Brune';changeClass()"><div><img src="img/brune.png" width="60" height="60"></div><div>Brunes</div></a></span>
+      <span ng-class="imgClassNoire"><a href="#" ng-click="color='Noire';changeClass()"><div><img src="img/noire.png" width="60" height="60"></div><div>Noires</div></a></span>
+  </div>
+
+
 
   <table>
       <tr>
@@ -36,6 +74,7 @@
               <span ng-show="sortType == 'Nom'&& !sortReverse" class="fa fa-caret-down"></span>
               <span ng-show="sortType == 'Nom'&& sortReverse" class="fa fa-caret-up"></span>
           </a></th>
+          <th>Couleur</th>
           <th>Style</th>
           <th>Authenticité</th>
           <th>Equilibre</th>
@@ -50,11 +89,12 @@
               <span ng-show="sortType == 'Moyenne'&& sortReverse" class="fa fa-caret-down"></span>
           </a></th>
       </tr>
-    <tr ng-repeat="beer in store.beers | orderBy:sortType:sortReverse | filter:searchBeer">
+    <tr ng-repeat="beer in store.beers | orderBy:sortType:sortReverse | filter:searchBeer" ng-if="color == beer.Couleur || color=='all'">
       <td>{{beer.Nom}}
           <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_filled-25.png" title="Pression" width="20" ng-show="beer.Pression=='y'">
           <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/beer_bottle_filled-25.png" title="Bouteille" width="20" ng-show="beer.Pression=='n'">
       </td>
+        <td>{{beer.Couleur}}</td>
         <td>{{beer.Style}}</td>
       <td>{{beer.Authenticite}}</td>
       <td>{{beer.Equilibre}}</td>
