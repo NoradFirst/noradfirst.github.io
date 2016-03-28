@@ -1,25 +1,50 @@
 /*My CSS*/
 
-.margin-top{
-    margin-top: 25px;
+/* Webfont: Lato-Black */@font-face {
+    font-family: 'LatoWebBlack';
+    src: url('../fonts/Lato-Black.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+    url('../fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Lato-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
-.addbeer{
+.float-center{
+text-align: center;
     margin-top: 5px;
-    margin-bottom: 25px;
 }
 
-table
+body{
+    background-image: url("../img/437743.jpg");
+    font-family: LatoWebBlack,"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+table>tbody>tr>td{
+    border: 1px solid rgba(40, 40, 40, 1) !important;
+}
+
+tbody
 {
     border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 th
 {
-    border: 1px solid #888 !important;
     padding: 2px;
     font-size: 15px;
     text-align: center;
+    border: 1px solid rgba(40, 40, 40, 0) !important;
+    border-bottom: 1px solid rgba(40, 40, 40, 1) !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 th>a, th>a:hover, th>a:visited{
@@ -28,9 +53,9 @@ th>a, th>a:hover, th>a:visited{
 
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
     z-index: 3;
-    color: #fff;
+    color: #000;
     cursor: default;
-    background-color: #985f0d;
+    background-color: rgba(238, 229, 157,1);
     border-color: #ddd;
 }
 
@@ -42,17 +67,28 @@ th>a, th>a:hover, th>a:visited{
     line-height: 1.42857143;
     color: #000;
     text-decoration: none;
-    background-color: #fff;
-
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(40, 40, 40, 0.7) !important;
 }
 
 .pagination>li>a:hover {
-    background-color: #ddd;
+    background-color: #fff;
     color: #000;
+    border-color: rgba(40, 40, 40, 0.7) !important;
+}
+
+
+.pagination>.disabled>a, .pagination>.disabled>a:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(40, 40, 40, 0.7) !important;
+}
+
+.pagination{
+    margin-bottom: 5px;
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: #ddd;
+    background-color: rgba(238, 229, 157, 0.8);
 }
 
 .width-80{
@@ -67,6 +103,10 @@ th>a, th>a:hover, th>a:visited{
 
 .fig{
     text-align: center;
+}
+
+.list{
+    margin-bottom: 10px;
 }
 
 .list>span>a{
@@ -92,5 +132,20 @@ th>a, th>a:hover, th>a:visited{
     border: 2px solid #000
 }
 
+.proudly{
+    color: white;
+    text-shadow: -2px 2px 4px #000000;
+    float: right;
+    margin-top: 15px;
+}
 
+table{
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 1170px) {
+    th, tr, .pagination{
+        font-size: 13px !important;
+    }
+}
 
