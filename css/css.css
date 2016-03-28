@@ -109,6 +109,10 @@ th>a, th>a:hover, th>a:visited{
     margin-bottom: 10px;
 }
 
+.list>span{
+    text-align: center;
+}
+
 .list>span>a{
     display: inline-block;
     text-align: center;
